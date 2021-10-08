@@ -8,14 +8,14 @@ import javax.sql.DataSource;   //ctl+shift+o  :: To import pkgs
 
 import com.nt.bo.EmployeeBO;
 
-public class EmployeeDAOImpl implements IEmployeeDAO {
+public class EmployeeOracleDAOImpl implements IEmployeeDAO {
 	private static final String  EMP_INSERT_QUERY="INSERT INTO REALTIMEDI_SPRING_EMPLOYEE VALUES(SP_ENO_SEQ.NEXTVAL,?,?,?,?,?)";
 	//HAS-A Property
 	private  DataSource ds;
 	
 	//Alt+shift+s, o
-	public EmployeeDAOImpl(DataSource ds) {
-		System.out.println("EmployeeDAOImpl: 1- param constructor");
+	public EmployeeOracleDAOImpl(DataSource ds) {
+		System.out.println("EmployeeOracleDAOImpl: 1- param constructor");
 		this.ds = ds;
 	}
 
