@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<context:property-placeholder location="com/nt/commons/jdbc.properties"/>
+
+  <!-- DataSource cfg -->
+  <bean id="drds"  class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="${jdbc.driver}"/>
+      <property name="url" value="${jdbc.url}"/>
+      <property name="username" value="${db.user}"/>
+      <property name="password" value="${db.pwd}"/>
+  </bean>
+  
+ 
+  
+  <!-- DAO class cfg -->
+  <bean id="empOraDAO"  class="com.nt.dao.EmployeeOracleDAOImpl">
+      <constructor-arg name="ds" ref="drds"/>
+  </bean>
+   <bean id="empMySqlDAO"  class="com.nt.dao.EmployeeMySQLDAOImpl">
+      <constructor-arg name="ds" ref="drds"/>
+  </bean>
+  
+  <!-- service class cfg  -->
+  <bean id="empService" class="com.nt.service.EmployeeMgmtServiceImpl">
+    <!--  <constructor-arg name="dao"  ref="empOraDAO"/> -->
+      <constructor-arg name="dao"  ref="empMySqlDAO"/> 
+  </bean>
+  
+  <!-- controller cfg -->
+  <bean id="controller"  class="com.nt.controller.MainController">
+      <constructor-arg name="service"  ref="empService"/>
+  </bean>
+
+</beans>

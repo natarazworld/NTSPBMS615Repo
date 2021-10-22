@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <!-- cfg dependent classes -->
+  <bean id="dtdc" class="com.nt.comp.DTDC" lazy-init="true"/>
+  <bean id="dhl" class="com.nt.comp.DHL"  />
+  <bean id="bDart" class="com.nt.comp.BlueDart" scope="prototype"/>
+  
+  <!-- cfg Target class -->
+  <bean id="fpkt" class="com.nt.comp.Flipkart"  scope="singleton">
+     <property name="courier"  ref="dtdc"/>
+  </bean>
+
+</beans>
