@@ -28,7 +28,9 @@
   <!-- service class cfg  -->
   <bean id="empService" class="com.nt.service.EmployeeMgmtServiceImpl">
     <!--  <constructor-arg name="dao"  ref="empOraDAO"/> -->
-      <constructor-arg name="dao"  ref="empMySqlDAO"/> 
+      <constructor-arg name="dao"  ref="empMySqlDAO"/>
+      <property name="osName" value="${os.name}"/>
+      <property name="path"  value="${Path}"/> 
   </bean>
   
   <!-- controller cfg -->

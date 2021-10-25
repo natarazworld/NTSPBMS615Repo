@@ -7,6 +7,20 @@ import com.nt.dto.EmployeeDTO;
 public class EmployeeMgmtServiceImpl implements IEmployeeMgmtService {
 	//HAS -A property
 	private IEmployeeDAO dao;
+	private  String osName;
+	
+	private  String path;
+	
+	public void setOsName(String osName) {
+		System.out.println("EmployeeMgmtServiceImpl.setOsName()");
+		this.osName=osName;
+	}
+
+	public void setPath(String path) {
+		System.out.println("EmployeeMgmtServiceImpl.setPath()");
+		this.path = path;
+	}
+
 	
 	//alt+shift+s , o
 	public EmployeeMgmtServiceImpl(IEmployeeDAO dao) {
@@ -16,7 +30,7 @@ public class EmployeeMgmtServiceImpl implements IEmployeeMgmtService {
 
 	@Override
 	public String registerEmployee(EmployeeDTO dto) throws Exception {
-		System.out.println("EmployeeMgmtServiceImpl.registerEmployee()");
+		System.out.println("EmployeeMgmtServiceImpl.registerEmployee()"+"osName="+osName+" path="+path);
 		//write  b.logic to calculate grossSalary and NetSalary
 		float grossSalary=dto.getBasicSalary()+ dto.getBasicSalary()*0.4f;   // +40% on BasicSalary
 		float netSalary=grossSalary -  dto.getBasicSalary()*0.2f;  // - 20% on grossSalary

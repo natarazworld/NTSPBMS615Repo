@@ -5,6 +5,7 @@ import java.util.Scanner;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.env.Environment;
 
 import com.nt.controller.MainController;
 import com.nt.vo.EmployeeVO;
@@ -35,6 +36,16 @@ public class RealtimeDITest {
 			//e.printStackTrace();
 			System.out.println("Internal problem::"+e.getMessage());
 		}
+		
+		System.out.println("==================");
+		System.out.println(System.getProperties());
+		System.out.println("=================");
+		Environment env=ctx.getEnvironment();
+		System.out.println(env.toString());
+		System.out.println(env.getRequiredProperty("os.name"));
+		System.out.println(env.getRequiredProperty("jdbc.driver"));
+		System.out.println(env.getClass());
+		
 
 	}//main
 }//class
