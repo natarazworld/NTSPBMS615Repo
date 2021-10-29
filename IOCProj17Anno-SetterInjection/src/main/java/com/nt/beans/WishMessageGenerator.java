@@ -4,16 +4,35 @@ package com.nt.beans;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 
 public class WishMessageGenerator {
 	//HAS-A property (supporting composition)
 	@Autowired
+	@Qualifier("dt")
 	private  Date  date;
 	
-	public WishMessageGenerator() {
-		System.out.println("WishMessageGenerator:: 0-param constructor");
+	@Autowired
+	@Qualifier("dt3")
+	public   void assign(Date date) {  // This method signature must match with setter method signature
+		System.out.println("WishMessageGenerator.assign()");
+		this.date=date;
 	}
+	
+	@Autowired
+	@Qualifier("dt2")
+	public void setDate(Date date) {
+		System.out.println("WishMessageGenerator.setDate(-)");
+		this.date=date;
+	}
+	
+	@Autowired
+	public WishMessageGenerator(@Qualifier("dt1")Date date) {
+		this.date=date;
+		System.out.println("WishMessageGenerator:: 1-param constructor ::date::"+date);
+	}
+	
 
 	//B.method
 	public  String generateMessage(String user) {
