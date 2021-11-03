@@ -6,7 +6,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.nt.comp.DHL;
 import com.nt.comp.Flipkart;
 
-import in.nt.comp1.TestBean;
 
 public class StrategyDPTest {
 
@@ -24,8 +23,6 @@ public class StrategyDPTest {
 		 System.out.println(dhl);
 		 System.out.println("......................");
 		 
-		 TestBean tb=ctx.getBean("tb",TestBean.class);
-		 System.out.println(tb);
 		 
 	}//main
 }//class

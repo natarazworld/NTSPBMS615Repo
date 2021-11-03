@@ -6,13 +6,19 @@ import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component("fpkt")
 public final class Flipkart {
 	//HAS -A   property of type interface
 	@Autowired
-	@Qualifier("dtdc")
+	//@Qualifier("dtdc") // hardcoding of dependent bean id is bad pratice
+	//@Qualifier(@Value("${choose.courier}")) // Will not work becoz @Qualifier does not allow  @Value
+	/*@Value("${choose.courier}")
+	private String  cid; 
+	@Qualifier(cid)   we can not pass bean id as the variable name */
+	@Qualifier("logistic")
 	private Courier courier;
 	
 	public Flipkart() {
