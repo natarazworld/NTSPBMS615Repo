@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.0</version>
+		<version>2.6.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>nit</groupId>
-	<artifactId>BootProj02-AutoConfiguration</artifactId>
+	<artifactId>BootProj03-MiniProject-LayeredApp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BootProj02-AutoConfiguration</name>
+	<name>BootProj03-MiniProject-LayeredApp</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
@@ -20,45 +20,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
-	<!-- 		<exclusions>
-				<exclusion>
-					<groupId>com.zaxxer</groupId>
-					<artifactId>HikariCP</artifactId>
-				</exclusion>
-			</exclusions> -->
 		</dependency>
-		
- 		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jdbc -->
-<dependency>
-    <groupId>org.apache.tomcat</groupId>
-    <artifactId>tomcat-jdbc</artifactId>
-</dependency> 
-
-<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ucp -->
-<dependency>
-    <groupId>com.oracle.database.jdbc</groupId>
-    <artifactId>ucp</artifactId>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
-<dependency>
-    <groupId>com.mchange</groupId>
-    <artifactId>c3p0</artifactId>
-    <version>0.9.5.5</version>
-</dependency>
-
-
-		
-	 	<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
- <dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-dbcp2</artifactId>
-</dependency>
 
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -72,6 +44,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
