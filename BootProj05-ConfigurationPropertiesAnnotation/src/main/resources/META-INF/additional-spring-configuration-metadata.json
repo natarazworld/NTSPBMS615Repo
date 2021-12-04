@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "cust.info.billAmt",
+    "type": "java.lang.String",
+    "description": "A description for 'cust.info.billAmt'"
+  },
+  {
+    "name": "cust.info.addrs",
+    "type": "java.lang.String",
+    "description": "A description for 'cust.info.addrs'"
+  },
+  {
+    "name": "cust.info.billAmt",
+    "type": "java.lang.String",
+    "description": "A description for 'cust.info.billAmt'"
+  },
+  {
+    "name": "cust.info.name",
+    "type": "java.lang.String",
+    "description": "A description for 'cust.info.name'"
+  },
+  {
+    "name": "cust.info.age",
+    "type": "java.lang.String",
+    "description": "A description for 'cust.info.age'"
+  }
+]}
