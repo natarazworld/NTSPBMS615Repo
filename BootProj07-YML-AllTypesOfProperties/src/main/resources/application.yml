@@ -1,0 +1,26 @@
+per:
+  info:
+    favColors: [bule,red,green] 
+     
+    id-details:
+      voterId: 5457788885
+    idDetails:
+      aadharNo: 5543577778
+      panNo: AJXPRH6707H
+    job-info:
+      deptNo: 6678
+    jobInfo:
+      company: HCL
+      desg: CLERK
+    phone-numbers:
+    - 7777777777
+    phoneNumbers:
+    - 9999999999
+    - 8888888888
+    - 7777777777
+    pid: 1001
+    pname: raja
+    studies:
+    - 10+2-MPC
+    - B.Tech-CSE
+    - M.Tech-IT

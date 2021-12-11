@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    url: jdbc:mysql:///ntspbms615db
+    username: root
