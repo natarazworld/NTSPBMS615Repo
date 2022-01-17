@@ -37,7 +37,28 @@ public interface IMovieRepo extends JpaRepository<Movie, Integer> {
 		@Query("select mname  from Movie where year>=:start and year<=:end order by mname desc ")
 		public  List<String>  fetchMoviesByYearRange(String start,String end);
 		
+   // Single Row Entity Query
+		@Query("from  Movie  where mname=:name")  //assuming movie names are unique name
+		public Movie  fetchMovieDataByMname(String name);
 		
+		   // Single Row Scalar query giving  specific multiple col values
+		@Query("select mid,mname,year from  Movie  where mname=:name") 
+		  public  Object  fetchMoviePartialDataByMname(String name);
+		
+		//single Row  Scalar query giving single specific col vlaue
+		@Query("select year from  Movie  where mname=:name") 
+		  public  String  fetchMovieSingleDataByMname(String  name);
+		
+		// executing single aggregate function
+		
+	   @Query("select max(rating) from Movie ")
+		public float   fetchMaxRatingMovie();
+	   
+	   @Query("select max(rating),min(rating),avg(rating),count(*),avg(year),sum(year) from Movie ")
+	   public  Object  fetchAggregateDataOnMoives();
+		
+
+	
 		
 
 }

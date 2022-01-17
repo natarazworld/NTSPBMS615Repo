@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 import com.nt.repository.IMovieRepo;
 
-@Component
+//@Component
 public class QueryMethodsTestRunner implements CommandLineRunner {
 	@Autowired
 	private  IMovieRepo  repo;  // InMememory proxy class obj of our Repository(I) will be injected
