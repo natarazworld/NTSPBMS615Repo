@@ -43,7 +43,10 @@ public class QueryMethodsTestRunnerForSingleRow implements CommandLineRunner {
 	    System.out.println(" Avg rating  "+results1[2]);
 	    System.out.println(" count of movies  "+results1[3]);
 	    System.out.println(" avg of years  "+results1[4]);
-	    System.out.println(" sum of years  "+results1[5]);		
+	    System.out.println(" sum of years  "+results1[5]);
+	    
+	    System.out.println("-----------------------------");
+	    repo.fetchMaxRatingMovies().forEach(System.out::println);
 		   
        
 		

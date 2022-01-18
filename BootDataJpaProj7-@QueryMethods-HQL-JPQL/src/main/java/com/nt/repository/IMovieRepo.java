@@ -56,6 +56,11 @@ public interface IMovieRepo extends JpaRepository<Movie, Integer> {
 	   
 	   @Query("select max(rating),min(rating),avg(rating),count(*),avg(year),sum(year) from Movie ")
 	   public  Object  fetchAggregateDataOnMoives();
+	   
+	   //executing  sub query
+	   @Query("from Movie  where rating=(select max(rating) from  Movie) ")
+	   public  List<Movie>  fetchMaxRatingMovies();    
+	   
 		
 
 	
