@@ -17,6 +17,12 @@ public interface IMovieRepo extends JpaRepository<Movie, Integer> {
 	@Modifying
    public   int  registerMovie(String name,float rating, String year);	
 	
+	@Query(value="SELECT SYSDATE from DUAL",nativeQuery = true)
+	public   String   fetchSysDate();
+	
+	@Query(value="create table temp116(col1 number(5))",nativeQuery = true)
+	@Modifying
+	public int  createTempTable();
 		
 
 }
