@@ -18,7 +18,7 @@ public class OneToManyMappingTestRunner implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		 //prepare child objects
+		/* //prepare child objects
 		 PhoneNumber ph=new PhoneNumber();
 		 ph.setContactNo(999999999L); ph.setNumberType("office");
 		 ph.setProvider("airtel");
@@ -35,10 +35,14 @@ public class OneToManyMappingTestRunner implements CommandLineRunner {
 		 }//try
 		 catch(Exception e) {
 			 e.printStackTrace();
-		 }
-		 
-		 
-		 
+		 }*/
+		
+	   //service.loadDataUsingParent();
+		
+		//----------------------------------------
+		   ///service.deleteParentAndItsChilds(1001);
+		 //-----------------------------
+		 service.deleteAllPhoneNumbersOfAPerson(1000);
 		
 
 	}

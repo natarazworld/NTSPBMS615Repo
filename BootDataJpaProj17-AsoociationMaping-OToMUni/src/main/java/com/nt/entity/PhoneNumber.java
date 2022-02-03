@@ -26,6 +26,10 @@ public class PhoneNumber implements Serializable {
 	@Column(length = 20)
 	private  String provider; 
 	
+	public PhoneNumber() {
+		System.out.println("PhoneNumber:: 0-param constructor");
+	}
+	
 	   //taking property for FK column any db table is optional
 	@Override
 	public String toString() {
