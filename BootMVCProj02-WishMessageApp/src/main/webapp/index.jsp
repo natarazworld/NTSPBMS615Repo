@@ -1,0 +1,4 @@
+
+
+
+<jsp:forward page="home"/>
