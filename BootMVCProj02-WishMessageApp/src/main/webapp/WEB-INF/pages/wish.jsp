@@ -7,4 +7,4 @@
 
 <br><br>
 
-<a href="home">Go to home</a>
+<a href="./">Go to home</a>
