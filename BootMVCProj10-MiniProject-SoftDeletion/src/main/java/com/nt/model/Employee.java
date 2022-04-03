@@ -1,5 +1,6 @@
 package com.nt.model;
 
+
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -9,13 +10,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
-import com.sun.source.doctree.SerialDataTree;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
 import lombok.Data;
 
 @Entity
 @Table(name="emp")
+@SQLDelete(sql = "UPDATE EMP SET STATUS='inactive' WHERE EMPNO=?")
+@Where(clause = "STATUS <> 'inactive' ")
 @Data
 public class Employee  implements Serializable {
 	@Id
@@ -27,5 +32,6 @@ public class Employee  implements Serializable {
 	@Column(length = 20)
 	private  String  job;
 	private   Float sal;
+	@Transient
 	private  String vflag="no";
 }

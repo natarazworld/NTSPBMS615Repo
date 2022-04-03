@@ -1,12 +1,13 @@
 package com.nt.controller;
 
-import java.util.List;
 import java.util.Map;
-
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,12 +33,13 @@ public class EmployeeOperationsController {
 	}
 	
 	@GetMapping("/report")
-	public  String  showEmployeeReport(Map<String,Object> map) {
+	public  String  showEmployeeReport(@PageableDefault(page=0,size=3,sort = "job",direction =Sort.Direction.ASC ) Pageable pageable,
+			                                                      Map<String,Object> map) {
 		System.out.println("EmployeeOperationsController.showEmployeeReport()");
 		  //use serivce
-		List<Employee> list=service.getAllEmployees();
+		Page<Employee> page=service.getEmployeesPageData(pageable);
 		// put the results in model attributes
-		map.put("empsData",list);
+		map.put("empsData",page);
 		//return LVN
 		return "employee_report";
 	}//method
