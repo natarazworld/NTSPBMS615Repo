@@ -1,0 +1,19 @@
+server:
+  port: 4041
+  servlet:
+    context-path: /RestApp-MiniProject
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 100
+      minimum-idle: 10
+    password: root
+    url: jdbc:mysql:///ntspbms615db
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
