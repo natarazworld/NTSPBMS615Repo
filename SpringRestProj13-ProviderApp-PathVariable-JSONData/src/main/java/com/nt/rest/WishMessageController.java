@@ -3,6 +3,7 @@ package com.nt.rest;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +28,11 @@ public class WishMessageController {
 	public   ResponseEntity<String>  registerTourist(@RequestBody Tourist  tourist){
 		System.out.println("WishMessageController.registerTourist() ::"+ tourist);
 		return new ResponseEntity<String>("tourist Info::"+tourist.toString(),HttpStatus.CREATED);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public   ResponseEntity<String>  deleteTourist(@PathVariable("id") int tid){
+		return new ResponseEntity<String>(tid+" --Tourist is deleted",HttpStatus.OK);
 	}
 
 }
