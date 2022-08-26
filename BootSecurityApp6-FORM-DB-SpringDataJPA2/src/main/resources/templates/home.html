@@ -1,0 +1,16 @@
+
+<html      xmlns:th="http://www.thymeleaf.org">
+
+<h1 style="color:red;text-align:center">Home Page</h1>
+<br><br>
+
+ <h3> <a th:href="@{/user/register}"> register user</a></h3>
+
+<br><br><br>
+  <h3> <a th:href="@{/bank/offers}"> show offers</a></h3>
+  <h3> <a th:href="@{/bank/approveLoan}"> approve Loan</a></h3>
+<br>
+    <form th:action="@{/bank/balance}" method="POST">
+         <input type="submit" value=" show balance">
+  </form>
+  
