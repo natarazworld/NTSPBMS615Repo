@@ -1,0 +1,71 @@
+=== tools used in modren development,  build process ======
+https://www.youtube.com/watch?v=5oemIoT3KEc
+
+=== Debugging  in Eclipse IDE========
+https://youtu.be/8KI0GfoWTwQ
+https://youtu.be/z8317PyEM-k
+
+=========== Log4j  vedios ===============
+https://www.youtube.com/watch?v=RBxHHV_7Q0cd
+https://www.youtube.com/watch?v=uKsKwFpRkgg
+
+====Junit5, HttpUnit & Mockito===
+                  https://www.youtube.com/watch?v=6VVplfYp40M
+	https://www.youtube.com/watch?v=AI3b3FY2iD0
+	https://www.youtube.com/watch?v=7Xq4j0Q7aPE
+
+	====Agile-JIRA workshop =====
+https://www.youtube.com/watch?v=TUbriIbmJo0&t=1s
+
+===== JIRA workshop ========================
+https://www.youtube.com/watch?v=K-_kxisTKG0
+
+
+====resume preparation and interview tips====
+https://www.youtube.com/watch?v=mLrsZj088I0
+
+====> do u know IT industry ==========
+https://www.youtube.com/watch?v=H2rR5ZMLXcU&t=5s
+
+=============maven videos============
+https://www.youtube.com/watch?v=2ZWK87ws2tM
+https://www.youtube.com/watch?v=g8tyXC0fCd8&t=399s
+https://www.youtube.com/watch?v=S35fTmW9moc&t=11s
+https://www.youtube.com/watch?v=OpIE9qRhXl8&t=14s
+https://www.youtube.com/watch?v=WccmV8_MeC8&t=20s
+
+====Gradle vedios==================
+https://www.youtube.com/watch?v=5JkqrUu4kGM&t=75s
+https://www.youtube.com/watch?v=CfATtI9_nMA
+https://www.youtube.com/watch?v=A12Z8LjJEMo
+https://www.youtube.com/watch?v=jTJwieViWQQ&t=7074s
+
+
+===== language vs  technology  vs   framework======
+https://www.youtube.com/watch?v=Bw3v1b3WjDM&t=604s
+https://www.youtube.com/watch?v=aXSllXjkf4U&t=833s
+https://www.youtube.com/watch?v=bKi_cNUh-8w
+
+
+
+==============JAva Bean vedios =============
+https://www.youtube.com/watch?v=io2TciOcF2Y
+https://www.youtube.com/watch?v=GOvak6awDrI&t=161s
+
+
+===== lombok api==================
+https://www.youtube.com/watch?v=4hlnLkwgxig&list=RDCMUC4o8Fdpv3g_AjgShAeivqpA&index=1
+https://www.youtube.com/watch?v=e1_9uPJ31Lw&list=RDCMUC4o8Fdpv3g_AjgShAeivqpA&index=2
+
+===== Git Tutorial=================================
+https://www.youtube.com/watch?v=_frCuw5JWdQ&list=PLVlQHNRLflP-C43xWt10PB3gKC8DDPB12
+
+
+=============== Resume preparation &  interview tips ==============
+https://www.youtube.com/watch?v=mLrsZj088I0&t=1s
+https://www.youtube.com/watch?v=F4F4aWi_w
+
+
+====Code Coverage tool =====
+JaCoCo (Java Code Coverage) | by Mr. Nataraj
+https://youtu.be/wc0eN73-2tM
