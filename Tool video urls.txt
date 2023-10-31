@@ -69,3 +69,32 @@ https://www.youtube.com/watch?v=F4F4aWi_w
 ====Code Coverage tool =====
 JaCoCo (Java Code Coverage) | by Mr. Nataraj
 https://youtu.be/wc0eN73-2tM
+
+note: if u know how to use singleton scope of spring bean effectively..then there is no need of implementing "singleton class" Design pattern in spring projects..
+
+generics =========
+
+https://www.youtube.com/watch?v=Wb3HSRj1PAY
+
+========reflection api
+
+https://www.youtube.com/watch?v=elFmT_d_OYE&t=198s
+
+java annotation fundamentals
+
+https://www.youtube.com/watch?v=2t22AjtbyEY&t=25s
+
+https://www.youtube.com/watch?v=-bGWDg91vR4&t=41s
+
+lombok api=======
+
+https://www.youtube.com/watch?v=4hinLkwgxig&list=RDCMUC408Fdpv3g_AjgShAeivqpA&index=1
+
+https://www.youtube.com/watch?v=e1_9uPJ31Lw&list=RDCMUC408Fdpv3g_AjgShAeivqpA&index=2
+
+JAva Bean vedios
+
+https://www.youtube.com/watch?v=io2TciOCF2Y
+
+https://www.youtube.com/watch?v=GOvak6awDrl&t=161s
+
